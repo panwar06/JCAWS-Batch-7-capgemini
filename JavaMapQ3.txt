@@ -1,0 +1,36 @@
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class JavaMapQ3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashMap<String, Integer> hash = new HashMap<>();
+        Scanner in = new Scanner(System.in);
+        int a=in.nextInt();
+        in.nextLine();
+        for(int i=0;i<a;i++)
+        {
+            String name=in.nextLine();
+            int phone=in.nextInt();
+            in.nextLine();
+            hash.put(name,phone);
+        }
+        while(in.hasNext())
+        {
+            
+        	String b=in.nextLine();
+            try
+            {
+                int out=hash.get(b);
+                System.out.println(b+"="+out);
+            }
+            catch(Exception e)
+            {
+                System.out.println("Not found");
+            }
+        }
+
+	}
+
+}
